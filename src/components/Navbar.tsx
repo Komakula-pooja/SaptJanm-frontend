@@ -20,7 +20,7 @@ export const Navbar = () => {
 
             {/* Action Section */}
             <div className="flex items-center space-x-2 sm:space-x-4">
-                <h1 className="text-xs sm:text-sm md:text-base font-medium text-gray-600">
+                <h1 className="text-xs sm:text-sm md:text-base font-medium underline text-gray-600">
                     Already have an account?
                 </h1>
                 <button 
