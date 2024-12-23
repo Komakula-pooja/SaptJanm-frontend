@@ -12,7 +12,7 @@ export const Navbar = () => {
     return (
         <div className="sticky top-0 border-b flex flex-wrap items-center justify-between px-4 sm:px-8 md:px-16 py-6 z-50 shadow-md bg-white">
             <h1 className="font-bold text-2xl md:text-4xl flex items-center text-red-600">
-                Saptjanm
+                SaptJanm
                 <span className="px-3 py-1 text-4xl md:text-5xl">
                     <GiLovers />
                 </span>
