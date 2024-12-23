@@ -9,11 +9,11 @@ export const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className="grid grid-cols-2 ">
+      <div className="grid grid-cols-1 grid-cols-2">
             <div>
                 <Signup />
             </div>
-            <div>
+            <div className="hidden lg:block">
                 <Quote />
             </div>
         </div>
