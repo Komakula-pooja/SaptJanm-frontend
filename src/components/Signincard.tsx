@@ -1,12 +1,12 @@
 import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { SignupInput } from "@komakula/saptjanam-common";
+import { SigninInput } from "@komakula/saptjanam-common";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 
 const Signincard = () => {
   const navigate = useNavigate();
-  const [postInputs, setPostInputs] = useState<SignupInput>({
+  const [postInputs, setPostInputs] = useState<SigninInput>({
     email: "",
     password: "",
   });
@@ -32,7 +32,7 @@ const Signincard = () => {
     <div className="h-full flex justify-center items-center bg-gray-50 py-8 px-4">
       <div className="bg-white shadow-md rounded-lg p-6 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-extrabold text-red-600">Sign in to SaptJanm</h1>
+          <h1 className="text-3xl font-extrabold text-red-600">Sign in</h1>
         </div>
         <div>
           <LabelledInput

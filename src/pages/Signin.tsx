@@ -14,10 +14,8 @@ export const Signin = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-gray-100">
-      {/* Background overlay for better contrast */}
       <div className="absolute inset-0 bg-black/20 z-0" />
 
-      {/* Scrolling Background Section (4 images per row) */}
       <div className="absolute inset-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 p-8 overflow-hidden">
         {coupleImages.map((imageUrl, idx) => (
           <div
@@ -27,13 +25,12 @@ export const Signin = () => {
               backgroundImage: `url(${imageUrl})`,
             }}
           >
-            {/* Blur overlay that clears on hover */}
+
             <div className="absolute inset-0 w-full h-full rounded-2xl backdrop-blur-[6px] backdrop-brightness-90 group-hover:backdrop-blur-0 transition-all duration-500" />
           </div>
         ))}
       </div>
 
-      {/* SigninCard Section (Floating over the images) */}
       <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-auto">
         <div className="transform transition-all duration-300 hover:scale-[1.02] px-4 sm:px-0">
           <Signincard />
