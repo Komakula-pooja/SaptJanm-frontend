@@ -1,4 +1,4 @@
-import  { ChangeEvent,useState } from 'react';
+import { ChangeEvent,useState } from 'react';
 import { CreateProfile } from '@komakula/saptjanam-common';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -27,9 +27,10 @@ const Profiledetails = () => {
 
     async function sendRequest() {
     try {
-        const response = await axios.post(`${BACKEND_URL}/api/v1/profile`, postInputs);
-        const jwt = response.data;
-        localStorage.setItem("token", jwt);
+        const response = await axios.post(
+            `${BACKEND_URL}/api/v1/profile`,
+             postInputs
+        );
         alert("Profile details saved");
         navigate("/dashboard");
     } catch (error) {
