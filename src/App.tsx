@@ -4,6 +4,7 @@ import { Signin } from "./pages/Signin"
 import { HomeRedirect } from "./components/HomeRedirect"
 import Profile from "./pages/Profile"
 import Dashboard from "./pages/Dashboard"
+import EditProfile from "./pages/EditProfile"
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/EditProfile" element={<EditProfile />} />
       </Routes>
       </BrowserRouter>
     </>
