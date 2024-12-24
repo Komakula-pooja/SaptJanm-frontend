@@ -33,7 +33,7 @@ const Profiledetails = () => {
         return;
       }
 
-       await axios.post(
+      await axios.post(
         `${BACKEND_URL}/api/v1/profile`,
         postInputs,
         {
@@ -55,7 +55,7 @@ const Profiledetails = () => {
 
   return (
     <div className="h-full flex justify-center items-center bg-gray-50 py-8 px-4">
-      <div className="bg-white shadow-md rounded-lg p-6 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
+      <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-extrabold text-red-600">Profile Details</h1>
         </div>
@@ -141,11 +141,11 @@ const Profiledetails = () => {
               onChange={(e) => setPostInputs({ ...postInputs, occupation: e.target.value })}
               id="occupation-input"
             />
-            <div className="flex justify-between">
+            <div className="flex justify-between flex-col sm:flex-row mt-4">
               <button
                 onClick={handlePrevious}
                 type="button"
-                className="w-full mt-6 mx-4 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
+                className="w-full sm:w-auto mt-6 sm:mt-0 mx-4 sm:mx-2 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
               >
                 Previous
               </button>
@@ -155,7 +155,7 @@ const Profiledetails = () => {
                   sendRequest();
                 }}
                 type="button"
-                className="w-full mt-6 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
+                className="w-full sm:w-auto mt-6 sm:mt-0 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
               >
                 Submit
               </button>
@@ -194,3 +194,4 @@ function LabelledInput({ label, placeholder, onChange, type, id }: LabelledInput
 }
 
 export default Profiledetails;
+
