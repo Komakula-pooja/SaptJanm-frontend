@@ -6,11 +6,11 @@ const Profile = () => {
   return (
     <div>
       <Appbar />
-      <div className="flex flex-wrap">
-        <div className="w-2/5 sm:w-2/5 md:w-2/5 lg:w-2/5 p-4">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full lg:w-2/5 p-4">
           <Designpage />
         </div>
-        <div className="w-3/5 sm:w-3/5 md:w-3/5 lg:w-3/5 p-4">
+        <div className="w-full lg:w-3/5 p-4">
           <Profiledetails />
         </div>
       </div>
@@ -19,4 +19,5 @@ const Profile = () => {
 };
 
 export default Profile;
+
 
