@@ -68,9 +68,6 @@ const DisplayProfile = () => {
                             ></path>
                         </svg>
                     </div>
-                    <div className="absolute top-0 right-0 p-1 bg-gray-200 rounded-full">
-                            <CiEdit className="w-6 h-6 text-gray-600" />
-                    </div>
                 </div>
 
                 <div className="text-center">
@@ -82,7 +79,7 @@ const DisplayProfile = () => {
                         onClick={() => console.log("Edit Profile")}
                         className="mt-4 text-blue-500"
                     >
-                        Edit Profile
+                        Edit Profile <CiEdit className="w-6 h-6 text-gray-600"/>
                     </button>
                 </div>
             </div>
@@ -91,3 +88,5 @@ const DisplayProfile = () => {
 }
 
 export default DisplayProfile;
+
+
