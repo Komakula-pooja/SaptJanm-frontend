@@ -33,7 +33,7 @@ const Profiledetails = () => {
         return;
       }
 
-      const response = await axios.post(
+       await axios.post(
         `${BACKEND_URL}/api/v1/profile`,
         postInputs,
         {
