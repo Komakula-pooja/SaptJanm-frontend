@@ -6,6 +6,7 @@ import { BACKEND_URL } from "../config";
 
 const Profiledetails = () => {
   const [step, setStep] = useState(1);
+  const [profilePhoto, setProfilePhoto] = useState<File | null>(null);
   const navigate = useNavigate();
   const [postInputs, setPostInputs] = useState<CreateProfile>({
     name: "",
@@ -23,6 +24,13 @@ const Profiledetails = () => {
 
   const handleNext = () => setStep((prev) => prev + 1);
   const handlePrevious = () => setStep((prev) => prev - 1);
+
+  const handleProfilePhotoChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files ? e.target.files[0] : null;
+    if (file) {
+      setProfilePhoto(file);
+    }
+  };
 
   async function sendRequest() {
     try {
@@ -55,13 +63,35 @@ const Profiledetails = () => {
 
   return (
     <div className="h-full flex justify-center items-center bg-gray-50 py-8 px-4">
-      <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
-        <div className="text-center mb-6">
+      <div className="bg-white shadow-lg rounded-lg p-6 sm:p-10 md:p-12 w-full max-w-md mx-4 sm:mx-auto">
+        <div className="text-center mb-8">
           <h1 className="text-3xl font-extrabold text-red-600">Profile Details</h1>
         </div>
 
         {step === 1 && (
           <div>
+            <div className="mb-6">
+              <label htmlFor="profile-photo" className="block mb-2 text-sm font-semibold text-gray-700">
+                Profile Photo
+              </label>
+              <input
+                type="file"
+                id="profile-photo"
+                onChange={handleProfilePhotoChange}
+                accept="image/*"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-3"
+              />
+            </div>
+
+            {profilePhoto && (
+              <div className="mb-6 text-center">
+                <img
+                  src={URL.createObjectURL(profilePhoto)}
+                  alt="Profile Preview"
+                  className="w-32 h-32 rounded-full object-cover mx-auto"
+                />
+              </div>
+            )}
             <LabelledInput
               label="Name"
               placeholder="John Doe"
@@ -141,7 +171,7 @@ const Profiledetails = () => {
               onChange={(e) => setPostInputs({ ...postInputs, occupation: e.target.value })}
               id="occupation-input"
             />
-            <div className="flex justify-between flex-col sm:flex-row mt-4">
+            <div className="flex justify-between flex-col sm:flex-row mt-6">
               <button
                 onClick={handlePrevious}
                 type="button"
@@ -177,7 +207,7 @@ interface LabelledInputType {
 
 function LabelledInput({ label, placeholder, onChange, type, id }: LabelledInputType) {
   return (
-    <div className="mb-4">
+    <div className="mb-6">
       <label htmlFor={id} className="block mb-2 text-sm font-semibold text-gray-700">
         {label}
       </label>
@@ -185,7 +215,7 @@ function LabelledInput({ label, placeholder, onChange, type, id }: LabelledInput
         onChange={onChange}
         type={type || "text"}
         id={id}
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-3"
         placeholder={placeholder}
         required
       />
@@ -194,4 +224,3 @@ function LabelledInput({ label, placeholder, onChange, type, id }: LabelledInput
 }
 
 export default Profiledetails;
-

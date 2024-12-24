@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <div>
       <Appbar />
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col md:flex-row">
         <div className="w-full lg:w-2/5 p-4">
           <Designpage />
         </div>
