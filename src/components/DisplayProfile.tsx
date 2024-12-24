@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { BACKEND_URL } from "../config"
 import axios from "axios"
 import { CiEdit } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 interface ProfileProps {
     id: string;
@@ -17,6 +18,7 @@ interface ProfileProps {
 const DisplayProfile = () => {
     const [profile, setProfile] = useState<ProfileProps | null>(null);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate()
 
     useEffect(() => {
         async function fetchData() {
@@ -38,6 +40,10 @@ const DisplayProfile = () => {
 
         fetchData();
     }, []);
+
+    const handleEdit=()=>{
+        navigate("/EditProfile")
+    }
 
     if (loading) {
         return (
@@ -72,12 +78,12 @@ const DisplayProfile = () => {
                 <div className="mt-4">
                     <div className="text-2xl font-bold text-gray-800">{profile.name}</div>
                     <p className="mt-4 text-gray-600">
-                        I am {profile.age} years old, And I'm a {profile.occupation} after completing my {profile.education} degree,I come from a {profile.familyStatus}, {profile.familyType} family and currently live in {profile.location}.
+                        I am {profile.age} years old and a {profile.occupation} after completing my {profile.education} degree, I come from a {profile.familyStatus}, {profile.familyType} family and currently lives in {profile.location}.
                     </p>
                 </div>
 
                 <button
-                    onClick={() => console.log("Edit Profile")}
+                    onClick={handleEdit}
                     className="mt-4 text-blue-500 flex items-center"
                 >
                     Edit Profile <CiEdit className="w-6 h-6 ml-2 text-blue-500" />
