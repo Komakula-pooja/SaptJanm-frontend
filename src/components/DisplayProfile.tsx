@@ -52,8 +52,9 @@ const DisplayProfile = () => {
     }
 
     return (
-        <div className="min-h-screen bg-color1 flex justify-center items-center pt-10">
+        <div className="min-h-screen bg-color1 flex justify-center items-start pt-6">
             <div className="w-full max-w-md mx-auto flex flex-col items-center text-center">
+                {/* Profile Picture */}
                 <div className="relative w-36 h-36 overflow-hidden bg-gray-100 rounded-full flex items-center justify-center">
                     <svg
                         className="w-24 h-24 text-gray-400"
@@ -69,6 +70,7 @@ const DisplayProfile = () => {
                     </svg>
                 </div>
 
+                {/* Profile Content */}
                 <div className="mt-4">
                     <div className="text-2xl font-bold text-gray-800">{profile.name}</div>
                     <p className="mt-4 text-gray-600">
@@ -76,14 +78,15 @@ const DisplayProfile = () => {
                     </p>
                 </div>
 
+                {/* Edit Button with Icon beside */}
                 <button
                     onClick={() => console.log("Edit Profile")}
-                    className="mt-4 text-blue-500"
+                    className="mt-4 text-blue-500 flex items-center"
                 >
-                    Edit Profile <span><CiEdit className="w-6 h-6 text-blue-500" /></span>
+                    Edit Profile <CiEdit className="w-6 h-6 ml-2 text-blue-500" />
                 </button>
 
-
+                {/* Horizontal Line */}
                 <div className="mt-6 w-full border-t border-gray-300"></div>
             </div>
         </div>
