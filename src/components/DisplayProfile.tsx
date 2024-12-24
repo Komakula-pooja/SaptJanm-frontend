@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { BACKEND_URL } from "../config"
 import axios from "axios"
+import { Edit } from "lucide-react";  // Import the edit icon from lucide-react
 
 interface ProfileProps {
     id: string;
@@ -16,8 +17,6 @@ interface ProfileProps {
 const DisplayProfile = () => {
     const [profile, setProfile] = useState<ProfileProps | null>(null);
     const [loading, setLoading] = useState(true);
-    const [isEditingIcon, setIsEditingIcon] = useState(false);
-    const [newIcon, setNewIcon] = useState<string>("");
 
     useEffect(() => {
         async function fetchData() {
@@ -40,15 +39,6 @@ const DisplayProfile = () => {
         fetchData();
     }, []);
 
-    const handleIconChange = () => {
-        // Handle the logic for updating the profile icon
-        if (newIcon) {
-            console.log("Updating profile icon:", newIcon);
-            // Call an API to update the profile icon if necessary
-        }
-        setIsEditingIcon(false);
-    };
-
     if (loading) {
         return (
             <div className="min-h-screen bg-color1 flex items-center justify-center text-green-900">
@@ -66,45 +56,23 @@ const DisplayProfile = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md mx-auto">
                 <div className="flex items-center justify-center mb-6">
                     <div className="relative w-36 h-36 overflow-hidden bg-gray-100 rounded-full flex items-center justify-center">
-                        {isEditingIcon ? (
-                            <div>
-                                <input
-                                    type="text"
-                                    value={newIcon}
-                                    onChange={(e) => setNewIcon(e.target.value)}
-                                    placeholder="Enter new icon URL"
-                                    className="p-2 border rounded-md"
-                                />
-                                <button
-                                    onClick={handleIconChange}
-                                    className="mt-2 bg-blue-500 text-white px-4 py-1 rounded-md"
-                                >
-                                    Save
-                                </button>
-                            </div>
-                        ) : (
-                            <svg
-                                className="w-24 h-24 text-gray-400"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                    clipRule="evenodd"
-                                ></path>
-                            </svg>
-                        )}
-                    </div>
-                    {!isEditingIcon && (
-                        <button
-                            onClick={() => setIsEditingIcon(true)}
-                            className="absolute bottom-0 right-0 text-blue-500"
+                        <svg
+                            className="w-24 h-24 text-gray-400"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
                         >
-                            Edit
-                        </button>
-                    )}
+                            <path
+                                fillRule="evenodd"
+                                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                clipRule="evenodd"
+                            ></path>
+                        </svg>
+                        {/* Edit Icon beside the profile picture */}
+                        <div className="absolute top-0 right-0 p-1 bg-gray-200 rounded-full">
+                            <Edit className="w-6 h-6 text-gray-600" />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="text-center">
