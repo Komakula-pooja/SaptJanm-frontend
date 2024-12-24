@@ -67,10 +67,9 @@ const DisplayProfile = () => {
                                 clipRule="evenodd"
                             ></path>
                         </svg>
-
-                        <div className="absolute top-0 right-0 p-1 bg-gray-200 rounded-full">
+                    </div>
+                    <div className="absolute top-0 right-0 p-1 bg-gray-200 rounded-full">
                             <CiEdit className="w-6 h-6 text-gray-600" />
-                        </div>
                     </div>
                 </div>
 
