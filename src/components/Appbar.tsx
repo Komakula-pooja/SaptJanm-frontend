@@ -1,10 +1,7 @@
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import { GiLovers } from "react-icons/gi";
 
 export const Appbar = () => {
-    const navigate = useNavigate();
-
-
 
     return (
         <div className="sticky top-0 border-b flex items-center justify-between px-4 py-4 sm:px-6 lg:px-16 z-50 shadow-md bg-white">
