@@ -72,7 +72,7 @@ const DisplayProfile = () => {
                 <div className="mt-4">
                     <div className="text-2xl font-bold text-gray-800">{profile.name}</div>
                     <p className="mt-4 text-gray-600">
-                        I am a {profile.age} years old, I'm a {profile.occupation} after completing my {profile.education} degree, And I come from a {profile.familyStatus}, {profile.familyType} family and currently live in {profile.location}.
+                        I am {profile.age} years old, And I'm a {profile.occupation} after completing my {profile.education} degree,I come from a {profile.familyStatus}, {profile.familyType} family and currently live in {profile.location}.
                     </p>
                 </div>
 
@@ -82,8 +82,8 @@ const DisplayProfile = () => {
                 >
                     Edit Profile <CiEdit className="w-6 h-6 ml-2 text-blue-500" />
                 </button>
+                <div className="mt-6 w-full border-t border-gray-300"></div>
             </div>
-            <div className="mt-6 w-full border-t border-gray-300"></div>
         </div>
     );
 }
