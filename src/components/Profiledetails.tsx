@@ -171,11 +171,11 @@ const Profiledetails = () => {
               onChange={(e) => setPostInputs({ ...postInputs, occupation: e.target.value })}
               id="occupation-input"
             />
-            <div className="flex justify-between flex-col sm:flex-row mt-6">
+            <div className="flex flex-col sm:flex-row justify-center mt-6">
               <button
                 onClick={handlePrevious}
                 type="button"
-                className="w-full sm:w-auto mt-6 sm:mt-0 mx-4 sm:mx-2 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
+                className="w-full sm:w-auto mb-4 sm:mb-0 mx-4 sm:mx-2 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
               >
                 Previous
               </button>
@@ -185,7 +185,7 @@ const Profiledetails = () => {
                   sendRequest();
                 }}
                 type="button"
-                className="w-full sm:w-auto mt-6 sm:mt-0 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
+                className="w-full sm:w-auto mx-4 sm:mx-2 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5"
               >
                 Submit
               </button>

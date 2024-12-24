@@ -22,7 +22,7 @@ const Signincard = () => {
       localStorage.setItem("token", jwt);
       localStorage.setItem("email", postInputs.email);
       alert("Signup successful.");
-      navigate("/profile");
+      navigate("/dashboard");
     } catch (e) {
       alert("Error while signing up.");
     }
