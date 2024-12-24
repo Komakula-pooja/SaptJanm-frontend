@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
 import { BACKEND_URL } from "../config"
 import axios from "axios"
-import { Edit } from "lucide-react";  // Import the edit icon from lucide-react
-
+import { CiEdit } from "react-icons/ci";
 interface ProfileProps {
     id: string;
     name: string;
@@ -68,9 +67,9 @@ const DisplayProfile = () => {
                                 clipRule="evenodd"
                             ></path>
                         </svg>
-                        {/* Edit Icon beside the profile picture */}
+
                         <div className="absolute top-0 right-0 p-1 bg-gray-200 rounded-full">
-                            <Edit className="w-6 h-6 text-gray-600" />
+                            <CiEdit className="w-6 h-6 text-gray-600" />
                         </div>
                     </div>
                 </div>
