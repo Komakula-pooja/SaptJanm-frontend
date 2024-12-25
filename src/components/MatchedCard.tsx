@@ -23,7 +23,20 @@ const MatchedCard = ({
 }:MatchedCardProps) => {
   return (
     <div className="p-6 bg-red-200 border border-red-300 rounded-lg shadow-md my-2 flex flex-col items-center text-center">
-        <Avatar name={name} />
+        <div className="relative w-24 h-24 overflow-hidden bg-gray-100 rounded-full flex items-center justify-center">
+            <svg
+                className="w-24 h-24 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fillRule="evenodd"
+                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                    clipRule="evenodd"
+                ></path>
+            </svg>
+        </div>
         <div className="mt-2 font-semibold text-gray-800">{name}</div>
         <div className="text-sm text-gray-600">
             {age} years old, {occupation}
@@ -38,25 +51,6 @@ const MatchedCard = ({
         </div>
      </div>
   )
-}
-
- export function Avatar({ name, size = "big" }: { name: string; size?: "small" | "big" }) {
-    return (
-      <div
-        className={`relative inline-flex items-center justify-center
-        overflow-hidden bg-red-100 rounded-full ${
-          size === "small" ? "w-6 h-6" : "w-20 h-20"
-        }`}
-      >
-        <span
-          className={`${
-            size === "small" ? "text-xs" : "text-md"
-          } font-extralight text-gray-600 dark:text-gray-300`}
-        >
-          {name[0].toUpperCase()}
-        </span>
-      </div>
-    );
 }
 
 export default MatchedCard
