@@ -30,10 +30,10 @@ const OtherProfilecard = ({
             <div className="pt-4 text-gray-700">OCCUPATION: {profile.occupation}</div>
           </div>
 
-          <div className="hidden md:block md:col-span-4 lg:col-span-4 bg-red-200 p-6 rounded-lg shadow-md">
-            <HeartHandshake className="text-white w-10 h-10"/>
-            <div className="text-xl font-semibold text-whte">"Together, We Grow"</div>
-            <div className="pt-4 white">"A perfect life partner is not someone you just live with, but someone you build a future with.
+          <div className="hidden md:block md:col-span-4 text-center lg:col-span-4 bg-red-300 p-6 rounded-lg shadow-md">
+            <HeartHandshake className="text-white w-32 h-32"/>
+            <div className="text-xl font-semibold ">"Together, We Grow"</div>
+            <div className="pt-4">"A perfect life partner is not someone you just live with, but someone you build a future with.
                  We connect you with individuals who are ready to grow together, support each other, and create lasting memories."</div>
           </div>
         </div>
