@@ -3,6 +3,7 @@ import { BACKEND_URL } from "../config"
 import axios from "axios"
 import { CiEdit } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
+import MatchedProfile from "./MatchedProfile";
 
 interface ProfileProps {
     id: string;
@@ -58,8 +59,8 @@ const DisplayProfile = () => {
     }
 
     return (
-        <div className="min-h-screen bg-color1 flex justify-center items-start pt-6">
-            <div className="w-full max-w-md mx-auto flex flex-col items-center text-center">
+        <div className="min-h-screen bg-color1 flex flex-col items-center pt-6">
+            <div className="w-full max-w-md flex flex-col items-center text-center">
                 <div className="relative w-36 h-36 overflow-hidden bg-gray-100 rounded-full flex items-center justify-center">
                     <svg
                         className="w-24 h-24 text-gray-400"
@@ -89,6 +90,9 @@ const DisplayProfile = () => {
                     Edit Profile <CiEdit className="w-6 h-6 ml-2 text-blue-500" />
                 </button>
                 <div className="mt-6 w-full border-t border-gray-300"></div>
+            </div>
+            <div className="w-full max-w-4xl mt-6">
+                <MatchedProfile />
             </div>
         </div>
     );

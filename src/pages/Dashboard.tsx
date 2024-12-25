@@ -1,6 +1,5 @@
 import DisplayProfile from "../components/DisplayProfile"
 import { MainAppbar } from "../components/MainAppbar"
-import MatchedProfile from "../components/MatchedProfile"
 
 
 const Dashboard = () => {
@@ -8,7 +7,6 @@ const Dashboard = () => {
     <div>
       <MainAppbar />
       <DisplayProfile />
-      <MatchedProfile />
     </div>
   )
 }

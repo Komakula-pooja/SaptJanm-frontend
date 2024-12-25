@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 interface MatchedCardProps{
     id:number;
     name:string;
-    age:number;
-    gender:string;
+    age:number; gender:string;
     religion:string;
     location:string;
     maritalStatus:string;
@@ -23,27 +22,30 @@ const MatchedCard = ({
     occupation
 }:MatchedCardProps) => {
   return (
-    <div>
+    <div className="p-4 bg-gray-100 border border-gray-300 rounded-lg shadow-md my-2">
         <Avatar name={name} />
-        <div>
-            {name}
+        <div className="mt-2 font-semibold text-gray-800">{name}</div>
+        <div className="text-sm text-gray-600">
+            {age} years old, {occupation}
         </div>
-        <div>
-            {age},{occupation}
+        <div className="mt-2">
+            <Link
+                to={`/${id}`}
+                className="text-blue-500 hover:underline"
+            >
+                View More
+            </Link>
         </div>
-        <div>
-            <Link to={`/${id}`} >View More</Link>
-        </div>
-    </div>
+     </div>
   )
 }
 
- function Avatar({ name, size = "small" }: { name: string; size?: "small" | "big" }) {
+ export function Avatar({ name, size = "big" }: { name: string; size?: "small" | "big" }) {
     return (
       <div
         className={`relative inline-flex items-center justify-center
         overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 ${
-          size === "small" ? "w-6 h-6" : "w-10 h-10"
+          size === "small" ? "w-6 h-6" : "w-20 h-20"
         }`}
       >
         <span
