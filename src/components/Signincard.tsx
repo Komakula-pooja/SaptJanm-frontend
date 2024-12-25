@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { SigninInput } from "@komakula/saptjanam-common";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
+import { useToast } from '@chakra-ui/react'
 
 const Signincard = () => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const Signincard = () => {
     password: "",
   });
   const [loading, setLoading] = useState<boolean>(false);
+  const toast = useToast();
 
   async function sendRequest() {
     setLoading(true);
@@ -23,10 +25,23 @@ const Signincard = () => {
       const jwt = response.data.token;
       localStorage.setItem("token", jwt);
       localStorage.setItem("id", response.data.id);
-      alert("Signup successful.");
+
+       toast({
+        title: "Signin Successful",
+        description: "You have successfully signed in.",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
       navigate("/dashboard");
     } catch (e) {
-      alert("Error while signing up.");
+      toast({
+        title: "Error",
+        description: "An error occurred while signing in.",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
     } finally{
       setLoading(false);
     }
