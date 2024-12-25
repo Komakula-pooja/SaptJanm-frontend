@@ -16,7 +16,7 @@ function App() {
       <Routes>
           <Route path='/' element={<HomeRedirect />} />
           <Route path='/home' element={<Home/>} />
-          <Route path="/signin" element={<ProtectedRoute element={<Signin />}/>} />
+          <Route path="/signin"  element={<Signin />} />
           <Route path="/profile" element={<ProtectedRoute element={<Profile />}/>} />
           <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />}/>} />
           <Route path="/EditProfile" element={<ProtectedRoute element={<EditProfile />}/>} />
