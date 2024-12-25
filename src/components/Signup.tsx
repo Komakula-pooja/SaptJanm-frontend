@@ -74,6 +74,17 @@ const Signup = () => {
               "Signup"
             )}
           </button>
+
+          <div className="sm:hidden text-center mt-4">
+            <h1 className="text-sm font-medium text-gray-600">Already have an account?</h1>
+            <button 
+              onClick={() => navigate("/signin")}
+              className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br 
+              focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs sm:text-sm md:text-base px-3 py-2 sm:px-5 sm:py-2.5"
+            >
+              Signin
+            </button>
+          </div>
         </div>
       </div>
     </div>
