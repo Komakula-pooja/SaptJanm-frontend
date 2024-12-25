@@ -94,11 +94,14 @@ const EditProfile = () => {
         return;
       }
 
-      const requestBody={
-        ...postInputs,
-        "id":id
+      if (!id) {
+        throw new Error("Profile ID is missing.");
       }
-
+    
+      const requestBody = {
+        ...postInputs,
+        id: parseInt(id, 10), 
+      };
       console.log(requestBody)
 
       await axios.put(
