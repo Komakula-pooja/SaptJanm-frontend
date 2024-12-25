@@ -23,7 +23,7 @@ const MatchedCard = ({
 }:MatchedCardProps) => {
   return (
     <div className="p-6 bg-red-200 border border-red-300 rounded-lg shadow-md my-2 flex flex-col items-center text-center">
-        <div className="relative w-24 h-24 overflow-hidden bg-gray-100 rounded-full flex items-center justify-center">
+        <div className="relative w-24 h-24 overflow-hidden bg-red-200 rounded-full flex items-center justify-center">
             <svg
                 className="w-24 h-24 text-gray-400"
                 fill="currentColor"
