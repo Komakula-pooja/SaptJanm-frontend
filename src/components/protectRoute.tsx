@@ -8,7 +8,7 @@ export const ProtectedRoute = ({ element }: ProtectedRouteProps) => {
   const token = localStorage.getItem('token'); 
 
   if (!token) {
-    return <Navigate to="/home" replace />;
+    return <Navigate to="/signin" replace />;
   }
   return element;
 };
