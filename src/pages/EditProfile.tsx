@@ -83,6 +83,7 @@ const EditProfile = () => {
     try {
       const token = localStorage.getItem("token");
       const id = localStorage.getItem("id");
+      console.log(id)
 
       if (!token) {
         alert("You are not logged in. Please log in and try again.");
