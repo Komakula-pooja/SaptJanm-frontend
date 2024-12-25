@@ -82,7 +82,7 @@ const EditProfile = () => {
   async function sendRequest() {
     try {
       const token = localStorage.getItem("token");
-      const id = localStorage.getItem("id");
+      const id = localStorage.getItem("profileId");
       console.log(id)
 
       if (!token) {
