@@ -14,22 +14,8 @@ const OtherProfilecard = ({
         <MainAppbar />
         <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 px-4 sm:px-10 w-full max-w-screen-xl py-8">
-          <div className="relative w-36 h-36 sm:w-40 sm:h-40 mx-auto md:mx-0 overflow-hidden bg-red-300 rounded-full flex items-center justify-center md:col-span-3 lg:col-span-4">
-            <svg
-              className="w-28 h-28 sm:w-32 sm:h-32 text-red-600"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </div>
 
-          <div className="col-span-12 md:col-span-6 lg:col-span-5 bg-white p-6 rounded-lg shadow-md">
+          <div className="col-span-12 md:col-span-8 lg:col-span-8 bg-white p-6 rounded-lg shadow-md">
             <div className="text-2xl font-bold text-gray-800">NAME: {profile.name}</div>
             <div className="pt-4 text-gray-700">AGE: {profile.age}</div>
             <div className="pt-4 text-gray-700">GENDER: {profile.gender}</div>
@@ -43,7 +29,7 @@ const OtherProfilecard = ({
             <div className="pt-4 text-gray-700">OCCUPATION: {profile.occupation}</div>
           </div>
 
-          <div className="hidden md:block md:col-span-3 lg:col-span-3 bg-blue-100 p-6 rounded-lg shadow-md">
+          <div className="hidden md:block md:col-span-4 lg:col-span-4 bg-blue-100 p-6 rounded-lg shadow-md">
             <div className="text-xl font-semibold text-blue-800">Partner Match Info</div>
             <div className="pt-4 text-blue-700">
               <div>✔ Looking for a similar age range</div>
