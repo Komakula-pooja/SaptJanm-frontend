@@ -37,7 +37,7 @@ const Signup = () => {
     <div className="h-full flex justify-center items-center bg-gray-50 py-8 px-4">
       <div className="bg-white shadow-md rounded-lg p-6 md:p-10 w-full max-w-md mx-4 sm:mx-auto">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-extrabold text-red-600">Create an Account</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-red-600">Create an Account</h1>
         </div>
         <div className="sm:hidden flex justify-center items-center space-x-4 text-center mt-4">
           <h1 className="text-sm font-medium underline text-gray-600">Already have an account?</h1>
