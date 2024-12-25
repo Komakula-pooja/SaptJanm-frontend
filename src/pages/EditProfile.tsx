@@ -39,13 +39,6 @@ const EditProfile = () => {
     occupation: "",
   });
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-color1 flex items-center justify-center text-green-900">
-        <p className="text-xl font-semibold">Loading profile...</p>
-      </div>
-    );
-  }
 
   useEffect(() => {
     async function fetchData() {
@@ -122,6 +115,14 @@ const EditProfile = () => {
       alert(`Error: ${errorMessage}`);
       console.error(error);
     }
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-color1 flex items-center justify-center text-green-900">
+        <p className="text-xl font-semibold">Loading profile...</p>
+      </div>
+    );
   }
 
   return (
