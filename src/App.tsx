@@ -5,6 +5,7 @@ import { HomeRedirect } from "./components/HomeRedirect"
 import Profile from "./pages/Profile"
 import Dashboard from "./pages/Dashboard"
 import EditProfile from "./pages/EditProfile"
+import OtherProfile from "./pages/OtherProfile"
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/EditProfile" element={<EditProfile />} />
+          <Route path="/:id" element={<OtherProfile />} />
       </Routes>
       </BrowserRouter>
     </>

@@ -39,6 +39,14 @@ const EditProfile = () => {
     occupation: "",
   });
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-color1 flex items-center justify-center text-green-900">
+        <p className="text-xl font-semibold">Loading profile...</p>
+      </div>
+    );
+  }
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -64,14 +72,6 @@ const EditProfile = () => {
     fetchData();
   }, []);
 
-  // Show loading indicator if profile is still being fetched
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-color1 flex items-center justify-center text-green-900">
-        <p className="text-xl font-semibold">Loading profile...</p>
-      </div>
-    );
-  }
 
   const handleNext = () => setStep((prev) => prev + 1);
   const handlePrevious = () => setStep((prev) => prev - 1);
