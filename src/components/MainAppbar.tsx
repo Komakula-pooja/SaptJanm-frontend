@@ -1,12 +1,18 @@
 import { useState, useEffect, useRef } from "react";
 import { FaUser } from "react-icons/fa6";
 import { GiLovers } from "react-icons/gi";
+import { useNavigate } from 'react-router-dom';
 
 export const MainAppbar = () => {
+  const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const profileButtonRef = useRef<HTMLButtonElement>(null);
 
+  const handleLogout=()=>{
+    localStorage.removeItem("token");
+    navigate('/signin'); 
+  }
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
@@ -75,12 +81,11 @@ export const MainAppbar = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <button onClick={handleLogout}
                   className="block px-4 py-2 text-sm text-gray hover:bg-gray-100 "
                 >
                   Logout
-                </a>
+                </button>
               </li>
             </ul>
           </div>
