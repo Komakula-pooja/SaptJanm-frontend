@@ -81,7 +81,7 @@ const DisplayProfile = () => {
                 </p>
                 <button
                     onClick={handleEdit}
-                    className="mt-4 text-blue-500 flex items-center justify-center"
+                    className="mt-4 text-blue-500 flex items-center justify-center mx-auto"
                 >
                     Edit Profile <CiEdit className="w-5 h-5 ml-2 text-blue-500" />
                 </button>
