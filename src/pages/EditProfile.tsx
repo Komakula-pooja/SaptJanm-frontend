@@ -92,9 +92,11 @@ const EditProfile = () => {
 
       const requestBody={
         ...postInputs,
-        id
+        "id":id
       }
 
+      console.log(requestBody)
+      
       await axios.put(
         `${BACKEND_URL}/api/v1/profile`,
         requestBody,
