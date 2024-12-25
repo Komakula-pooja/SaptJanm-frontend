@@ -3,6 +3,7 @@ import { CreateProfile } from "@komakula/saptjanam-common";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
+import { MainAppbar } from "../components/MainAppbar";
 
 interface ProfileProps {
   id:number;
@@ -125,7 +126,8 @@ const EditProfile = () => {
     );
   }
 
-  return (
+  return (<div>
+    <MainAppbar />
     <div className="h-full flex justify-center items-center bg-gray-50 py-8 px-4">
       <div className="bg-white shadow-lg rounded-lg p-6 sm:p-10 md:p-12 w-full max-w-md mx-4 sm:mx-auto">
         <div className="text-center mb-8">
@@ -269,6 +271,7 @@ const EditProfile = () => {
         )}
       </div>
     </div>
+  </div>
   );
 };
 
