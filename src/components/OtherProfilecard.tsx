@@ -1,5 +1,6 @@
 import { MainAppbar } from "./MainAppbar"
 import { Profile } from "../hooks"
+import { HeartHandshake } from 'lucide-react';
 
 interface OtherProfileProps{
     profile:Profile;
@@ -29,23 +30,11 @@ const OtherProfilecard = ({
             <div className="pt-4 text-gray-700">OCCUPATION: {profile.occupation}</div>
           </div>
 
-          <div className="hidden md:block md:col-span-4 lg:col-span-4 bg-blue-100 p-6 rounded-lg shadow-md">
-            <div className="text-xl font-semibold text-blue-800">Partner Match Info</div>
-            <div className="pt-4 text-blue-700">
-              <div>✔ Looking for a similar age range</div>
-              <div>✔ Compatible family type</div>
-              <div>✔ Shared cultural interests</div>
-            </div>
-            <div className="flex justify-center mt-6">
-              <svg
-                className="w-12 h-12 text-blue-600"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.95 7.05a1.5 1.5 0 11-2.12 2.12L12 10.12l-1.83 1.83a1.5 1.5 0 01-2.12-2.12L9.88 8 8.05 6.17a1.5 1.5 0 112.12-2.12L12 5.88l1.83-1.83a1.5 1.5 0 112.12 2.12L14.12 8l1.83 1.83z" />
-              </svg>
-            </div>
+          <div className="hidden md:block md:col-span-4 lg:col-span-4 bg-red-200 p-6 rounded-lg shadow-md">
+            <HeartHandshake className="text-white w-10 h-10"/>
+            <div className="text-xl font-semibold text-whte">"Together, We Grow"</div>
+            <div className="pt-4 white">"A perfect life partner is not someone you just live with, but someone you build a future with.
+                 We connect you with individuals who are ready to grow together, support each other, and create lasting memories."</div>
           </div>
         </div>
       </div>
