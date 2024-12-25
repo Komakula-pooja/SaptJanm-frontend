@@ -22,7 +22,7 @@ const MatchedCard = ({
     occupation
 }:MatchedCardProps) => {
   return (
-    <div className="p-4 bg-gray-100 border border-gray-300 rounded-lg shadow-md my-2">
+    <div className="p-6 bg-red-200 border border-red-300 rounded-lg shadow-md my-2 flex flex-col items-center text-center">
         <Avatar name={name} />
         <div className="mt-2 font-semibold text-gray-800">{name}</div>
         <div className="text-sm text-gray-600">
@@ -44,7 +44,7 @@ const MatchedCard = ({
     return (
       <div
         className={`relative inline-flex items-center justify-center
-        overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 ${
+        overflow-hidden bg-red-100 rounded-full ${
           size === "small" ? "w-6 h-6" : "w-20 h-20"
         }`}
       >
