@@ -39,6 +39,16 @@ const Signup = () => {
         <div className="text-center mb-6">
           <h1 className="text-3xl font-extrabold text-red-600">Create an Account</h1>
         </div>
+        <div className="sm:hidden flex justify-center items-center space-x-4 text-center mt-4">
+          <h1 className="text-smm font-medium underline text-gray-600">Already have an account?</h1>
+          <button 
+            onClick={() => navigate("/signin")}
+            className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br 
+            focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs sm:text-sm md:text-base px-3 py-2 sm:px-5 sm:py-2.5"
+          >
+            Signin
+          </button>
+        </div>
         <div>
           <LabelledInput
             label="Email"
@@ -75,16 +85,6 @@ const Signup = () => {
             )}
           </button>
 
-          <div className="sm:hidden text-center mt-4">
-            <h1 className="text-sm font-medium text-gray-600">Already have an account?</h1>
-            <button 
-              onClick={() => navigate("/signin")}
-              className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br 
-              focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs sm:text-sm md:text-base px-3 py-2 sm:px-5 sm:py-2.5"
-            >
-              Signin
-            </button>
-          </div>
         </div>
       </div>
     </div>
