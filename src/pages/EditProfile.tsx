@@ -50,6 +50,10 @@ const EditProfile = () => {
           },
         });
         setProfile(res.data.profile);
+        setPostInputs((prevInputs) => ({
+          ...prevInputs,
+          ...res.data.profile,
+        }));
         setLoading(false);
       } catch (e) {
         setLoading(false);
@@ -96,7 +100,7 @@ const EditProfile = () => {
       }
 
       console.log(requestBody)
-      
+
       await axios.put(
         `${BACKEND_URL}/api/v1/profile`,
         requestBody,
