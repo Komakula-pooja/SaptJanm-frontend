@@ -18,9 +18,9 @@ const Signincard = () => {
         postInputs
       );
 
-      const jwt = response.data;
+      const jwt = response.data.token;
       localStorage.setItem("token", jwt);
-      localStorage.setItem("email", postInputs.email);
+      localStorage.setItem("id", response.data.id);
       alert("Signup successful.");
       navigate("/profile");
     } catch (e) {

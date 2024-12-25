@@ -5,6 +5,7 @@ import axios from "axios";
 import { BACKEND_URL } from "../config";
 
 interface ProfileProps {
+  id:number;
   name: string;
   age: number;
   gender: string;
@@ -68,7 +69,6 @@ const EditProfile = () => {
     );
   }
 
-  // Handle next and previous steps in the form
   const handleNext = () => setStep((prev) => prev + 1);
   const handlePrevious = () => setStep((prev) => prev - 1);
 
@@ -82,15 +82,21 @@ const EditProfile = () => {
   async function sendRequest() {
     try {
       const token = localStorage.getItem("token");
+      const id = localStorage.getItem("id");
 
       if (!token) {
         alert("You are not logged in. Please log in and try again.");
         return;
       }
 
+      const requestBody={
+        ...postInputs,
+        id
+      }
+
       await axios.put(
         `${BACKEND_URL}/api/v1/profile`,
-        postInputs,
+        requestBody,
         {
           headers: {
             Authorization: token,
