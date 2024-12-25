@@ -41,7 +41,7 @@ const Profiledetails = () => {
         return;
       }
 
-      await axios.post(
+      const res= await axios.post(
         `${BACKEND_URL}/api/v1/profile`,
         postInputs,
         {
@@ -51,6 +51,8 @@ const Profiledetails = () => {
           },
         }
       );
+      localStorage.setItem("profileId",res.data.id)
+      
 
       alert("Profile details saved");
       navigate("/dashboard");

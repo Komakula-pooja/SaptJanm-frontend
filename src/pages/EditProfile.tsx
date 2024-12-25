@@ -82,8 +82,8 @@ const EditProfile = () => {
   async function sendRequest() {
     try {
       const token = localStorage.getItem("token");
-      const userId = localStorage.getItem("id");
-      console.log(userId)
+      const id = localStorage.getItem("profileId");
+      console.log(id)
 
       if (!token) {
         alert("You are not logged in. Please log in and try again.");
@@ -92,7 +92,7 @@ const EditProfile = () => {
 
       const requestBody={
         ...postInputs,
-        userId
+        id
       }
 
       await axios.put(
