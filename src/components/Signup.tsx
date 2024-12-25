@@ -40,7 +40,7 @@ const Signup = () => {
           <h1 className="text-3xl font-extrabold text-red-600">Create an Account</h1>
         </div>
         <div className="sm:hidden flex justify-center items-center space-x-4 text-center mt-4">
-          <h1 className="text-smm font-medium underline text-gray-600">Already have an account?</h1>
+          <h1 className="text-sm font-medium underline text-gray-600">Already have an account?</h1>
           <button 
             onClick={() => navigate("/signin")}
             className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br 
