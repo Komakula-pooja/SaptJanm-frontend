@@ -31,7 +31,7 @@ const OtherProfilecard = ({
           </div>
 
           <div className="hidden md:block md:col-span-6 lg:col-span-6 bg-red-300 p-6 rounded-lg shadow-md flex flex-col items-center justify-center space-y-4">
-            <div className="items-center"><HeartHandshake className="text-black w-32 h-32" /></div>
+            <div className="flex justify-center"><HeartHandshake className="text-black w-32 h-32" /></div>
             <div className="text-xl text-center font-semibold">"Together, We Grow"</div>
             <div className="text-center">
               "A perfect life partner is not someone you just live with, but someone you build a future with. 
