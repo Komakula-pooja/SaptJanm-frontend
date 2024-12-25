@@ -16,7 +16,7 @@ const OtherProfilecard = ({
         <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 px-4 sm:px-10 w-full max-w-screen-xl py-8">
 
-          <div className="col-span-12 md:col-span-8 lg:col-span-8 bg-white p-6 rounded-lg shadow-md">
+          <div className="col-span-12 md:col-span-6 lg:col-span-6 bg-white p-6 rounded-lg shadow-md">
             <div className="text-2xl font-bold text-gray-800">NAME: {profile.name}</div>
             <div className="pt-4 text-gray-700">AGE: {profile.age}</div>
             <div className="pt-4 text-gray-700">GENDER: {profile.gender}</div>
@@ -30,10 +30,10 @@ const OtherProfilecard = ({
             <div className="pt-4 text-gray-700">OCCUPATION: {profile.occupation}</div>
           </div>
 
-          <div className="hidden md:block md:col-span-4 text-center lg:col-span-4 bg-red-300 p-6 rounded-lg shadow-md">
-            <HeartHandshake className="text-white w-32 h-32"/>
-            <div className="text-xl font-semibold ">"Together, We Grow"</div>
-            <div className="pt-4">"A perfect life partner is not someone you just live with, but someone you build a future with.
+          <div className="hidden md:block md:col-span-6 text-center lg:col-span-4 bg-red-300 p-6 rounded-lg shadow-md flex items-center justify-center">
+            <HeartHandshake className="text-black w-32 h-32"/>
+            <div className="text-xl font-semibold pt-4">"Together, We Grow"</div>
+            <div className="pt-4 text-center">"A perfect life partner is not someone you just live with, but someone you build a future with.
                  We connect you with individuals who are ready to grow together, support each other, and create lasting memories."</div>
           </div>
         </div>
