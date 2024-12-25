@@ -67,25 +67,17 @@ export const MainAppbar = () => {
           >
             <ul className="py-2">
               <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray hover:bg-gray-100"
-                >
+                <a href="#" className="block px-4 py-2 text-sm text-gray hover:bg-gray-100">
                   Settings
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray hover:bg-gray-100 "
-                >
+                <a href="#" className="block px-4 py-2 text-sm text-gray hover:bg-gray-100 ">
                   Help
                 </a>
               </li>
               <li>
-                <a onClick={handleLogout}
-                  className="block px-4 py-2 text-sm text-gray hover:bg-gray-100 "
-                >
+                <a onClick={handleLogout} className="block px-4 py-2 text-sm text-gray hover:bg-gray-100 " >
                   Logout
                 </a>
               </li>
