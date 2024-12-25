@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { FaUser } from "react-icons/fa6";
 import { GiLovers } from "react-icons/gi";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const MainAppbar = () => {
   const navigate = useNavigate();
@@ -37,13 +37,15 @@ export const MainAppbar = () => {
 
   return (
     <div className="sticky top-0 border-b flex items-center justify-between px-4 py-4 sm:px-6 lg:px-16 z-50 shadow-md bg-white">
-      {/* SaptJanm Title */}
+
+    <Link to="/dashboard">
       <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl flex items-center text-red-600">
         SaptJanm
         <span className="px-2 md:px-3 text-2xl sm:text-3xl lg:text-5xl">
           <GiLovers />
         </span>
       </h1>
+      </Link>
 
       <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse relative">
 
