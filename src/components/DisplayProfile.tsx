@@ -61,9 +61,9 @@ const DisplayProfile = () => {
     return (
         <div className="min-h-screen bg-color1 flex flex-col items-center pt-6">
             <div className="w-full max-w-md flex flex-col items-center text-center">
-                <div className="relative w-36 h-36 overflow-hidden bg-gray-100 rounded-full flex items-center justify-center">
+                <div className="relative w-36 h-36 overflow-hidden bg-red-300 rounded-full flex items-center justify-center">
                     <svg
-                        className="w-24 h-24 text-gray-400"
+                        className="w-24 h-24 text-red-600"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -76,24 +76,27 @@ const DisplayProfile = () => {
                     </svg>
                 </div>
 
-                <div className="mt-4">
-                    <div className="text-2xl font-bold text-gray-800">{profile.name}</div>
-                    <p className="mt-4 text-gray-600">
-                        I am {profile.age} years old and a {profile.occupation} after completing my {profile.education} degree, I come from a {profile.familyStatus}, {profile.familyType} family and currently lives in {profile.location}.
-                    </p>
-                </div>
-
-                <button
-                    onClick={handleEdit}
-                    className="mt-4 text-blue-500 flex items-center"
-                >
-                    Edit Profile <CiEdit className="w-6 h-6 ml-2 text-blue-500" />
-                </button>
+                <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-6">
+                    <div className="w-full max-w-2xl p-4 bg-white rounded-lg shadow-md mx-4 sm:mx-6 lg:mx-8">
+                        <h2 className="text-xl font-bold text-gray-800 mb-2">{profile.name}</h2>
+                        <p className="text-sm text-gray-600">
+                         I am {profile.age} years old and a {profile.occupation} after completing my {profile.education} degree, I come from a {profile.familyStatus}, {profile.familyType} family and currently lives in {profile.location}.
+                        </p>
+                    </div>
+                    <div className="mt-4"></div>
+                        <button
+                            onClick={handleEdit}
+                            className="mt-4 text-blue-500 flex items-center"
+                        >
+                             Edit Profile <CiEdit className="w-6 h-6 ml-2 text-blue-500" />
+                        </button>
+                    </div>
                 <div className="mt-6 w-full border-t border-gray-300"></div>
             </div>
             <div className="w-full max-w-4xl mt-6">
                 <MatchedProfile />
             </div>
+            
         </div>
     );
 }
