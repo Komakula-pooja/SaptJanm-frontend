@@ -25,7 +25,7 @@ const MatchedCard = ({
     <div className="p-6 bg-red-200 border border-red-300 rounded-lg shadow-md my-2 flex flex-col items-center text-center">
         <div className="relative w-24 h-24 overflow-hidden bg-red-200 rounded-full flex items-center justify-center">
             <svg
-                className="w-24 h-24 text-black"
+                className="w-24 h-24 text-gray-800"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
