@@ -30,7 +30,7 @@ const EditAuth = () => {
 
         try {
           const response = await axios.put(
-            `${BACKEND_URL}/api/v1/user/`,
+            `${BACKEND_URL}/api/v1/user`,
             requestBody
           );
     
