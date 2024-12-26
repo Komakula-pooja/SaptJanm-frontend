@@ -30,7 +30,7 @@ const FAQs = () => {
     },
     {
         question: "How do I change my password?",
-        answer: "click on Help button from dropdown and there you can update your email and password details"
+        answer: "click on Settings button from dropdown and there you can update your email and password details"
     }
     ];
 
