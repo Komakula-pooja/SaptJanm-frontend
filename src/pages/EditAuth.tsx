@@ -27,14 +27,17 @@ const EditAuth = () => {
             id: parseInt(id, 10), 
         };
         console.log(requestBody)
+        const filteredRequestBody = Object.fromEntries(
+            Object.entries(requestBody).filter(([_, value]) => value !== '')
+        );
 
         try {
           const response = await axios.put(
             `${BACKEND_URL}/api/v1/user`,
-            requestBody,
+             filteredRequestBody,
             {
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json", 
                 },
             }
           );
