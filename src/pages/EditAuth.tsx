@@ -31,7 +31,12 @@ const EditAuth = () => {
         try {
           const response = await axios.put(
             `${BACKEND_URL}/api/v1/user`,
-            requestBody
+            requestBody,
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
           );
     
           const jwt = response.data.token;
