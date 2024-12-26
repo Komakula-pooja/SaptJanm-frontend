@@ -1,13 +1,10 @@
 const Footer = () => {
   return (
-      <footer className="bg-white relative">
+      <div className="bg-white relative">
           <div className="mx-auto w-full max-w-screen-xl p-4 sm:p-6 lg:p-8">
               <div className="md:flex md:justify-between">
                   <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-3">
                       <div>
-                          <h2 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                              Resources
-                          </h2>
                           <ul className="text-gray-500 dark:text-gray-400 font-medium">
                               <li className="mb-3">
                                   <a className="hover:underline">Contact Us</a>
@@ -18,7 +15,6 @@ const Footer = () => {
                           </ul>
                       </div>
                       <div>
-                          <h2 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                           <ul className="text-gray-500 dark:text-gray-400 font-medium">
                               <li className="mb-3">
                                   <a className="hover:underline">Feedback</a>
@@ -29,9 +25,6 @@ const Footer = () => {
                           </ul>
                       </div>
                       <div>
-                          <h2 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                              Legal
-                          </h2>
                           <ul className="text-gray-500 dark:text-gray-400 font-medium">
                               <li className="mb-3">
                                   <a href="#" className="hover:underline">Privacy Policy</a>
@@ -69,7 +62,7 @@ const Footer = () => {
                   </svg>
               </a>
           </div>
-      </footer>
+    </div>
   );
 };
 
