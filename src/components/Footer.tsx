@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-      <div className="bg-white relative">
+      <footer className="bg-white relative">
           <div className="mx-auto w-full max-w-screen-xl p-4 sm:p-6 lg:p-8">
               <div className="md:flex md:justify-between">
                   <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-3">
@@ -37,7 +37,7 @@ const Footer = () => {
                   </div>
               </div>
           </div>
-          <div className="flex justify-center items-center space-x-4 mt-6 md:mt-8 lg:absolute lg:bottom-4 lg:right-4">
+          <div className="flex justify-center items-center space-x-4 my-4 md:my-6 lg:absolute lg:bottom-4 lg:right-4">
               <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                   <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                     <path fillRule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clipRule="evenodd"/>
@@ -62,7 +62,7 @@ const Footer = () => {
                   </svg>
               </a>
           </div>
-    </div>
+    </footer>
   );
 };
 
