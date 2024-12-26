@@ -14,6 +14,10 @@ const Signup = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   async function sendRequest() {
+    if (postInputs.password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
     setLoading(true);
     try {
       const response = await axios.post(
