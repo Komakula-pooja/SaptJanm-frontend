@@ -21,7 +21,7 @@ const Signup = () => {
         postInputs
       );
   
-      const jwt = response.data;
+      const jwt = response.data.token;
       localStorage.setItem("token", jwt);
       localStorage.setItem("id", response.data.id);
       alert("Signup successful.");
