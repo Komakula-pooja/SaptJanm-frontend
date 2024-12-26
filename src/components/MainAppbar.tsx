@@ -67,12 +67,12 @@ export const MainAppbar = () => {
           >
             <ul className="py-2">
               <li>
-                <a onClick={()=>{navigate("/settings")}} className="block px-4 py-2 text-sm text-gray hover:bg-gray-100">
+                <a href="/" className="block px-4 py-2 text-sm text-gray hover:bg-gray-100">
                   Settings
                 </a>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-sm text-gray hover:bg-gray-100 ">
+                <a href="/settings" className="block px-4 py-2 text-sm text-gray hover:bg-gray-100 ">
                   Help
                 </a>
               </li>
