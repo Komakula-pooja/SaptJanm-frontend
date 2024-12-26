@@ -23,7 +23,7 @@ const Signup = () => {
   
       const jwt = response.data;
       localStorage.setItem("token", jwt);
-      localStorage.setItem("email", postInputs.email);
+      localStorage.setItem("id", response.data.id);
       alert("Signup successful.");
       navigate("/profile");
     } catch (e) {
