@@ -22,7 +22,7 @@ const MatchedCard = ({
     occupation
 }:MatchedCardProps) => {
   return (
-    <div className="p-4 bg-red-100 border border-red-200 rounded-lg shadow-md my-4 mx-4 sm:mx-6 lg:mx-8 flex flex-col items-center text-center">
+    <div className="p-6 bg-red-100 border border-red-200 rounded-lg shadow-md my-4 mx-4 sm:mx-6 lg:mx-8 flex flex-col items-center text-center">
             <div className="relative w-20 h-20 sm:w-24 sm:h-24 overflow-hidden bg-red-300 rounded-full flex items-center justify-center">
                 <svg
                     className="w-16 h-16 sm:w-20 sm:h-20 text-red-600"
