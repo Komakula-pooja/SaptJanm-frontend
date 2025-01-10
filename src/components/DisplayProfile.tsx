@@ -89,7 +89,7 @@ const DisplayProfile = () => {
 
             <div className="mt-6 w-full border-t border-gray-300"></div>
 
-            <div className="w-full max-w-5xl mt-6">
+            <div className="w-full max-w-6xl mt-6">
                 <MatchedProfile />
             </div>
         </div>
